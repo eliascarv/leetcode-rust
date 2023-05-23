@@ -27,6 +27,19 @@ pub fn two_sum2(nums: Vec<i32>, target: i32) -> Vec<u32> {
     vec![]
 }
 
+pub fn two_sum3(nums: Vec<i32>, target: i32) -> Option<(usize, usize)> {
+    let mut map = HashMap::new();
+    for (i, &num) in nums.iter().enumerate() {
+        let diff = target - num;
+        if let Some(&value) = map.get(&diff) {
+            return Some((value, i));
+        } else {
+            map.insert(num, i);
+        }
+    }
+    None
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -45,5 +58,13 @@ mod test {
         let target = 9;
         let result = two_sum2(nums, target);
         assert_eq!(result, vec![0, 1]);
+    }
+
+    #[test]
+    fn test_v3() {
+        let nums = vec![2, 7, 11, 15]; 
+        let target = 9;
+        let result = two_sum3(nums, target);
+        assert_eq!(result, Some((0, 1)));
     }
 }
