@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-pub fn two_sum1(nums: &Vec<i32>, target: i32) -> Option<(usize, usize)> {
+pub fn two_sum1(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     for i in 0..nums.len() {
         for j in (i + 1)..nums.len() {
             if nums[i] + nums[j] == target {
@@ -11,7 +11,7 @@ pub fn two_sum1(nums: &Vec<i32>, target: i32) -> Option<(usize, usize)> {
     None
 }
 
-pub fn two_sum2(nums: &Vec<i32>, target: i32) -> Option<(usize, usize)> {
+pub fn two_sum2(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     let mut map = HashMap::new();
     for (i, num) in nums.iter().enumerate() {
         let diff = target - num;
@@ -27,7 +27,7 @@ pub fn two_sum2(nums: &Vec<i32>, target: i32) -> Option<(usize, usize)> {
     None
 }
 
-pub fn two_sum3(nums: &Vec<i32>, target: i32) -> Option<(usize, usize)> {
+pub fn two_sum3(nums: &[i32], target: i32) -> Option<(usize, usize)> {
     let mut map = HashMap::new();
     for (i, num) in nums.iter().enumerate() {
         let diff = target - num;
