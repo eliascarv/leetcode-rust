@@ -1,3 +1,6 @@
+// Problem 1. Two Sum
+// https://leetcode.com/problems/two-sum/
+
 use std::collections::HashMap;
 
 pub fn two_sum1(nums: &[i32], target: i32) -> Option<(usize, usize)> {

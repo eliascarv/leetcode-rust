@@ -1,3 +1,6 @@
+// Problem 217. Contains Duplicate
+// https://leetcode.com/problems/contains-duplicate/
+
 use std::collections::HashSet;
 
 pub fn contains_duplicate1(nums: &[i32]) -> bool {
