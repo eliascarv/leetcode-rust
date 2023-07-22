@@ -11,7 +11,6 @@ pub fn daily_temperatures(arr: &[i32]) -> Vec<i32> {
             counter += 1;
             if arr[n] > val {
                 result[i] = counter;
-                counter = 0;
                 break;
             }
         }
@@ -36,3 +35,4 @@ mod test {
         assert_eq!(daily_temperatures(&temp), vec![1, 1, 0]);
     }
 }
+
